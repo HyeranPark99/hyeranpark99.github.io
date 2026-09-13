@@ -370,6 +370,25 @@ section { scroll-margin-top: 90px; }
   gap: 24px;
 }
 
+.project-grid + .project-group-title { margin-top: 48px; }
+
+.project-grid--two { grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); }
+
+.project-group-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin: 0 0 20px;
+  font-size: 1.1rem;
+}
+
+.project-group-title span {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
 .project-card {
   background: var(--surface);
   border: 1px solid var(--surface-border);
@@ -480,6 +499,9 @@ section { scroll-margin-top: 90px; }
 .modal-title { margin: 0 20px 16px 0; font-size: 1.4rem; }
 
 .modal-desc { color: var(--text-dim); margin: 0 0 20px; }
+
+.modal-link { margin-top: 24px; }
+.modal-link[hidden] { display: none; }
 
 /* SKILLS */
 .skills-grid {

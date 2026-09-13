@@ -43,12 +43,20 @@ const modalTitle = document.getElementById('modalTitle');
 const modalDesc = document.getElementById('modalDesc');
 const modalTags = document.getElementById('modalTags');
 const modalClose = document.getElementById('modalClose');
+const modalLink = document.getElementById('modalLink');
 let lastFocused = null;
 
 function openModal(card) {
   modalTitle.textContent = card.querySelector('h3').textContent;
   modalDesc.textContent = card.querySelector('p').textContent;
   modalTags.innerHTML = card.querySelector('.tags').innerHTML;
+
+  if (card.dataset.repo) {
+    modalLink.href = card.dataset.repo;
+    modalLink.hidden = false;
+  } else {
+    modalLink.hidden = true;
+  }
 
   lastFocused = document.activeElement;
   modal.classList.add('open');

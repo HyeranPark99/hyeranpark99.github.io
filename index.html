@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hyeran Park — Software Engineer</title>
-<meta name="description" content="Hyeran Park — Backend Software Engineer. Java, Kotlin, Spring Boot, AI-powered engineering tooling.">
+<meta name="description" content="Hyeran Park — Backend Software Engineer. Java, Kotlin, Spring Boot, PostgreSQL, OpenShift/Kubernetes, AI-powered engineering tooling.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%234353ff%22/><text x=%2250%22 y=%2266%22 font-size=%2250%22 font-family=%22monospace%22 fill=%22white%22 text-anchor=%22middle%22>H</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,9 +37,10 @@
         <h1>Hyeran Park.</h1>
         <h2 class="typing-line">I build <span class="typing" id="typing"></span><span class="cursor">|</span></h2>
         <p class="hero-sub">
-          Java software engineer with 2.5+ years at American Express, building cloud-native
-          microservices, AI-powered engineering tooling, and data pipelines. Hands-on with
-          Spring Boot, PostgreSQL, REST APIs, AI agents, CI/CD, and Docker.
+          Backend software engineer with 3+ years at American Express, building cloud-native
+          microservices, AI-powered engineering tooling, and internal developer platforms. Hands-on with
+          Java, Kotlin, Spring Boot, PostgreSQL, REST API design, AI agents, Docker, OpenShift/Kubernetes,
+          and GitHub Actions CI/CD.
         </p>
         <div class="hero-actions">
           <a href="assets/Hyeran-Park-Resume.pdf" class="btn btn-pill btn-primary" download>Download Resume</a>
@@ -78,7 +79,7 @@
         <li>I care about giving reviewers a short, high-signal report instead of a wall of diffs to read.</li>
         <li>I like building the boring infrastructure — CI, contract tests, guardrails — that lets everyone else move faster safely.</li>
         <li>I mentor interns on API design, database design, and sprint planning, and I still enjoy being in the code myself.</li>
-        <li>Outside of work: fine-tuning small models for hobby projects, most recently a Pip-Boy chatbot running on a Raspberry Pi.</li>
+        <li>Outside of work: fine-tuning small models for hobby projects, most recently a Mr. House chatbot headed for a Raspberry Pi–powered Pip-Boy.</li>
       </ul>
     </div>
   </section>
@@ -132,7 +133,8 @@
     <p class="section-kicker">Projects</p>
     <h2 class="section-title">Things I've built.</h2>
 
-    <div class="project-grid">
+    <h3 class="project-group-title">At American Express <span>internal — code not public</span></h3>
+    <div class="project-grid project-grid--two">
       <article class="project-card" tabindex="0" role="button" aria-haspopup="dialog">
         <h3>Topology View</h3>
         <p>Application mapping artifact graphs across distributed services, giving hundreds of engineers real-time visibility into cross-domain application and API relationships.</p>
@@ -157,15 +159,25 @@
         <div class="tags"><span>Pact Broker</span><span>Docker</span><span>GitHub Actions</span></div>
       </article>
 
-      <article class="project-card" tabindex="0" role="button" aria-haspopup="dialog">
+    </div>
+
+    <h3 class="project-group-title">Personal projects <span>open source</span></h3>
+    <div class="project-grid">
+      <article class="project-card" tabindex="0" role="button" aria-haspopup="dialog" data-repo="https://github.com/HyeranPark99/mr_house_chatbot">
         <h3>Mr. House Chatbot</h3>
-        <p>Multi-agent AI pipeline with LoRA fine-tuning deployed on a Raspberry Pi via Ollama — a custom Pip-Boy chatbot with character-specific personality, case designed in Blender.</p>
-        <div class="tags"><span>LoRA</span><span>Ollama</span><span>Raspberry Pi</span></div>
+        <p>Persona chatbot built with a multi-agent Claude Code pipeline: curated dialogue dataset, persona QA scoring, LoRA fine-tuning of Llama 3.2 3B, and a Gradio app served by Ollama with voice I/O. Raspberry Pi 5 deployment is next.</p>
+        <div class="tags"><span>LoRA</span><span>Ollama</span><span>AI Agents</span><span>Python</span></div>
       </article>
 
-      <article class="project-card" tabindex="0" role="button" aria-haspopup="dialog">
+      <article class="project-card" tabindex="0" role="button" aria-haspopup="dialog" data-repo="https://github.com/HyeranPark99/Regime-Classification-and-Shift-Detection">
+        <h3>Market Regime Classification</h3>
+        <p>Streamlit dashboard classifying S&amp;P 500 and Bitcoin into bull, bear, and transitional regimes with Markov Switching models, plus LSTM price forecasts and local-LLM commentary. Unit-tested with pytest and linted in GitHub Actions CI.</p>
+        <div class="tags"><span>Python</span><span>Streamlit</span><span>LSTM</span><span>GitHub Actions</span></div>
+      </article>
+
+      <article class="project-card" tabindex="0" role="button" aria-haspopup="dialog" data-repo="https://github.com/HyeranPark99/Resume-Screening-Final-Project">
         <h3>Resume Screening NLP System</h3>
-        <p>NLP &amp; OCR pipeline using KNN/RNN models, achieving 94% accuracy with text preprocessing over HTML-format resume datasets.</p>
+        <p>OCR and NLP pipeline classifying resumes into 25 job categories. A bidirectional LSTM reached up to 96% test accuracy; KNN, SVC, and logistic regression were also compared on HTML-format resume data.</p>
         <div class="tags"><span>Python</span><span>RNN</span><span>OCR</span></div>
       </article>
     </div>
@@ -178,6 +190,7 @@
       <h3 class="modal-title" id="modalTitle"></h3>
       <p class="modal-desc" id="modalDesc"></p>
       <div class="tags" id="modalTags"></div>
+      <a class="btn btn-pill btn-primary modal-link" id="modalLink" href="#" target="_blank" rel="noopener" hidden>View on GitHub</a>
     </div>
   </div>
 
@@ -192,12 +205,12 @@
         <div class="tags"><span>Java</span><span>Kotlin</span><span>Python</span><span>JavaScript</span><span>C++</span><span>HTML/CSS</span></div>
       </div>
       <div class="skill-group">
-        <h3>Frameworks</h3>
-        <div class="tags"><span>Spring Boot</span><span>WebFlux</span><span>Vert.x</span><span>Next.js</span><span>React</span><span>Node.js</span><span>TensorFlow</span></div>
+        <h3>Frameworks &amp; Data</h3>
+        <div class="tags"><span>Spring Boot</span><span>WebFlux</span><span>Vert.x</span><span>Next.js</span><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>TensorFlow</span></div>
       </div>
       <div class="skill-group">
-        <h3>CI/CD &amp; Tooling</h3>
-        <div class="tags"><span>GitHub Actions</span><span>Jenkins</span><span>Maven</span><span>Git</span><span>Gradle</span><span>JIRA</span><span>Postman</span><span>Pact Broker</span></div>
+        <h3>Platform, CI/CD &amp; Tooling</h3>
+        <div class="tags"><span>Docker</span><span>OpenShift/Kubernetes</span><span>GitHub Actions</span><span>Jenkins</span><span>Maven</span><span>Git</span><span>Gradle</span><span>JIRA</span><span>Postman</span><span>Pact Broker</span></div>
       </div>
       <div class="skill-group">
         <h3>Core Skills</h3>
